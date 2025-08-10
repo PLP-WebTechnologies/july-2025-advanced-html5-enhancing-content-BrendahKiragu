@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Form Project</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: white;
+        color: black;
+      }
+      header,
+      footer {
+        background: grey;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      main {
+        padding: 1.5rem;
+        max-width: 1200px;
+        margin: auto;
+        background: white;
+      }
+      h1,
+      h2 {
+        color: #004080;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: left;
+      }
+      th {
+        background: #f0f0f0;
+      }
+      fieldset {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 0.5rem;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        margin-top: 0.25rem;
+        padding: 0.4rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        width: auto;
+        background: #004080;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+      }
+      button:hover {
+        background: blue;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Enhanced HTML5 Web Page</h1>
+      <p>Demonstrating Lists, Tables, Media, and a Complete Form</p>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- LISTS SECTION -->
+      <section>
+        <h2>Our Event Highlights</h2>
+        <p>Our curriculum offers foundational skills in</p>
+        <ul>
+          <li>Expert-led web development workshops</li>
+          <li>Networking opportunities with industry professionals</li>
+          <li>Hands-on coding challenges</li>
+          <li>Exclusive learning resources</li>
+        </ul>
+
+        <h3>Workshop Topics</h3>
+        <ol>
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS Styling & Responsive Design</li>
+          <li>JavaScript Basics</li>
+          <li>Accessibility Best Practices</li>
+        </ol>
+      </section>
+
+      <!-- TABLE SECTION -->
+      <section>
+        <h2>Workshop Schedule</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Session</th>
+              <th>Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 10:30</td>
+              <td>HTML5 & Semantic Markup</td>
+              <td>Jane Doe</td>
+            </tr>
+            <tr>
+              <td>10:45 - 12:15</td>
+              <td>CSS Styling & Responsive Design</td>
+              <td>John Smith</td>
+            </tr>
+            <tr>
+              <td>13:15 - 14:45</td>
+              <td>JavaScript Basics</td>
+              <td>Emily Johnson</td>
+            </tr>
+            <tr>
+              <td>15:00 - 16:30</td>
+              <td>Accessibility Best Practices</td>
+              <td>Michael Brown</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- MEDIA SECTION -->
+      <section>
+        <h2>Event Preview</h2>
+        <p>Watch our short promo video and see what’s in store:</p>
+        <video controls>
+          <source src="promo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p>Meet our team:</p>
+        <img src="team.jpg" alt="Our Workshop Team" />
+      </section>
+
+      <!-- FORM SECTION -->
+      <section>
+        <h2>Contact & Registration Form</h2>
+        <p>Please fill out the form below to register for our event.</p>
+
+        <form action="#" method="post" autocomplete="on">
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullName">Full Name:</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="John Doe"
+              required
+              minlength="3"
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+254712345678"
+              pattern="^\+?\d{10,15}$"
+              required
+            />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="">-- Select --</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+          </fieldset>
+
+          <!-- Address Information -->
+          <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="address">Street Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="123 Main St"
+              required
+            />
+
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Nairobi"
+              required
+            />
+
+            <label for="postal">Postal Code:</label>
+            <input
+              type="text"
+              id="postal"
+              name="postal"
+              pattern="^\d{5,6}$"
+              placeholder="00100"
+              required
+            />
+          </fieldset>
+
+          <!-- Login Details -->
+          <fieldset>
+            <legend>Login Details</legend>
+
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              minlength="4"
+              maxlength="15"
+              required
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="6"
+              placeholder="At least 6 characters"
+              required
+            />
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              minlength="6"
+              required
+            />
+          </fieldset>
+
+          <!-- Preferences -->
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <p>Choose your preferred contact method:</p>
+            <label
+              ><input
+                type="radio"
+                name="contactMethod"
+                value="email"
+                required
+              />
+              Email</label
+            >
+            <label
+              ><input type="radio" name="contactMethod" value="phone" />
+              Phone</label
+            >
+
+            <p>Subscribe to:</p>
+            <label
+              ><input type="checkbox" name="updates" value="newsletter" />
+              Newsletter</label
+            >
+            <label
+              ><input type="checkbox" name="updates" value="offers" /> Special
+              Offers</label
+            >
+
+            <label for="favColor">Favorite Color:</label>
+            <input type="color" id="favColor" name="favColor" value="#ff0000" />
+
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input
+              type="file"
+              id="profilePic"
+              name="profilePic"
+              accept="image/*"
+            />
+          </fieldset>
+
+          <!-- Read-only info -->
+          <fieldset>
+            <legend>Event Information</legend>
+            <label for="event">Event Name:</label>
+            <input
+              type="text"
+              id="event"
+              name="event"
+              value="Annual Web Development Workshop"
+              readonly
+            />
+          </fieldset>
+
+          <!-- Submit -->
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Enhanced HTML5 Project. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
